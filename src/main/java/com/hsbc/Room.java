@@ -12,7 +12,7 @@ final class Room {
     private final List<Integer> applicableOrdinals;
 
     Room(final String name, final Exposition... applicableExpositions) {
-        Objects.requireNonNull(name, "Napotkano pokoj bez nazwy");
+        Objects.requireNonNull(name, "Room name cannot be null");
         this.name = name;
         applicableOrdinals = Stream.of(applicableExpositions)
                 .map(Enum::ordinal)
